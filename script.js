@@ -64,6 +64,10 @@ function checkAnswer() {
         const result = document.getElementById("result");
         result.innerText = "Bravo ! C'était bien " + currentPerson.name;
 
+        // Afficher la photo nette
+        const personPhoto = document.getElementById("person-photo");
+        personPhoto.src = currentPerson.images[currentPerson.images.length - 1];
+
         // Incrémentation du nombre de réponses justes
         correctAnswers++;
 
@@ -79,6 +83,10 @@ function checkAnswer() {
             // Afficher l'image correspondante à l'étape actuelle
             const personPhoto = document.getElementById("person-photo");
             personPhoto.src = currentPerson.images[currentStep];
+
+            // Supprimer le texte que l'utilisateur avait mis
+            const guessInput = document.getElementById("guess-input");
+            guessInput.value = "";
         } else {
             // Afficher le résultat si toutes les images ont été affichées
             const result = document.getElementById("result");
@@ -101,6 +109,9 @@ function nextPerson() {
         // Afficher le résultat final
         const result = document.getElementById("result");
         result.innerText = "Tu as terminé la partie ! Tu as obtenu " + correctAnswers + " réponses justes sur " + persons.length;
+
+        //afficher le bouton rejouer
+        
 
         // Cacher le bouton "Suivant"
         const nextButton = document.getElementById("next-btn");
