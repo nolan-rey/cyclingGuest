@@ -1,20 +1,35 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jeux Devinette</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mon site de jeux</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="game-container">
-        <button id="start-btn" onclick="startGame()">Commencer la partie</button>
-        <img id="person-photo" src="" alt="Guess who">
-        <input type="text" id="guess-input" placeholder="Qui est-ce ?" style="display: none;">
-        <button id="submit-btn" onclick="checkAnswer()" style="display: none;">Valider</button>
-        <button id="next-btn" onclick="nextPerson()" style="display: none;">Suivant</button>
-        <p id="result"></p>
-    </div>
-    <script src="script.js"></script>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#">Accueil</a></li>
+        <li><a href="#">Jeux</a></li>
+        <li><a href="#">Règles</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section id="jeu">
+      <h1>Mon jeu de devinette</h1>
+      <p>Essayez de deviner la personne en fonction des indices donnés.</p>
+      <button id="start-btn" onclick="window.location.href='jeux.html'">Commencer</button>
+    </section>
+    <section id="regles">
+      <h1>Règles du jeu</h1>
+      <p>Les règles du jeu sont simples : essayez de deviner la personne en fonction des indices donnés.</p>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2023 Mon site de jeux</p>
+  </footer>
+  <script src="script.js"></script>
 </body>
 </html>

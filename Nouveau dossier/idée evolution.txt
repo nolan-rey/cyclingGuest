@@ -1,0 +1,29 @@
+1er version du jeux :
+
+- 5 personnages
+- nom et/ou prénom a trouver
+- score a la fin
+- possibilité de rejouer
+
+
+2eme version:
+
+-10 personnages
+- 2 partie différentes a choisir au début: - nom (et/ou) prénom / nom+prénom
+-design stylé du site
+
+
+3eme version : 
+
+-rajoute une connexion utilisateur pour sauvegarder le score
+
+
+4eme version :
+
+- plusieur jeux differents, questionnaire QCM
+
+
+5eme version : 
+
+- Duel QCM
+-classement utilisateur ...
