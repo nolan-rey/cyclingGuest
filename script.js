@@ -2,11 +2,11 @@
 const persons = [
     {
         name: "Tadej Pogacar",
-        images: ["/images/pogi-flou-1.jpg", "/images/pogi-flou-2.jpg",  "/images/pogi-flou-3.jpg", "/images/pogi-nette.jpg"]
+        images: ["pogi-flou-1.jpg", "pogi-flou-2.jpg",  "pogi-flou-3.jpg", "pogi-nette.jpg"]
     },
     {
         name: "Mathieu Van der Poel",
-        images: ["/images/MVDP-flou-1.jpg", "/images/MVDP-flou-2.jpg",  "/images/MVDP-flou-3.jpg", "/images/MVDP-nette.jpg"]
+        images: ["MVDP-flou-1.jpg", "MVDP-flou-2.jpg",  "MVDP-flou-3.jpg", "MVDP-nette.jpg"]
     },
     // Continue pour les autres personnes
 ];
