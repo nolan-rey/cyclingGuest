@@ -59,6 +59,9 @@ let playedPersons = [];
 // Variable pour stocker le nombre de réponses justes
 let correctAnswers = 0;
 
+// Variable pour stocker le score actuel
+let currentScore = 0;
+
 // Fonction pour commencer la partie
 function startGame() {
     // Supprimer le bouton "Commencer la partie"
@@ -101,10 +104,9 @@ function checkAnswer() {
     const [firstName, lastName] = currentPerson.name.split(' ');
 
     // Vérifier si la réponse est correcte
-    if (userAnswer.toLowerCase() === currentPerson.name.toLowerCase() ||
-        userAnswer.toLowerCase() === firstName.toLowerCase() ||
-        userAnswer.toLowerCase() === lastName.toLowerCase()) {
-        // Afficher la réponse correcte
+    if (userAnswer.toLowerCase() === currentPerson.name.toLowerCase()) {
+        // 10 points pour le nom et le prénom
+        currentScore += 10;
         let result = document.getElementById("result");
         if (!result) {
           result = document.createElement("p");
@@ -112,14 +114,40 @@ function checkAnswer() {
           const gameContainer = document.getElementById("game-container");
           gameContainer.appendChild(result);
         }
-        result.innerText = "Bravo ! C'était bien " + currentPerson.name;
+        result.innerText = "Bravo ! C'était bien " + currentPerson.name + " (+10 points)";
+    } else if (userAnswer.toLowerCase() === firstName.toLowerCase()) {
+        // 2 points pour le prénom
+        currentScore += 2;
+        let result = document.getElementById("result");
+        if (!result) {
+          result = document.createElement("p");
+          result.id = "result";
+          const gameContainer = document.getElementById("game-container");
+          gameContainer.appendChild(result);
+        }
+        result.innerText = "Bravo ! C'était bien " + currentPerson.name + " (+2 points)";
+    } else if (userAnswer.toLowerCase() === lastName.toLowerCase()) {
+        // 1 point pour le nom
+        currentScore += 1;
+        let result = document.getElementById("result");
+        if (!result) {
+          result = document.createElement("p");
+          result.id = "result";
+          const gameContainer = document.getElementById("game-container");
+          gameContainer.appendChild(result);
+        }
+        result.innerText = "Bravo ! C'était bien " + currentPerson.name + " (+1 point)";
+    } else {
+        // ...
+    }
 
-        // Afficher la photo nette
+    // Afficher la photo nette et incrémenter le nombre de réponses justes si la réponse est correcte
+    if (userAnswer.toLowerCase() === currentPerson.name.toLowerCase() || userAnswer.toLowerCase() === firstName.toLowerCase() || userAnswer.toLowerCase() === lastName.toLowerCase()) {
         const personPhoto = document.getElementById("person-photo");
         personPhoto.src = currentPerson.images[currentPerson.images.length - 1];
 
-        // Incrémentation du nombre de réponses justes
         correctAnswers++;
+
         // enlever le bouton  "Valider"
         const submitButton = document.getElementById("submit-btn");
         submitButton.style.display = "none";
@@ -159,7 +187,7 @@ function checkAnswer() {
             const nextButton = document.getElementById("next-btn");
             nextButton.style.display = "block";
         }
-        }
+    }
 }
 
 function replayGame() {
@@ -168,6 +196,7 @@ function replayGame() {
     correctAnswers = 0;
     currentPerson = null;
     currentStep = 0;
+    currentScore = 0;
   
     // Supprimez le bouton "Replay" et la phrase du score
     const replayButton = document.getElementById("replay-btn");
@@ -188,6 +217,7 @@ function replayGame() {
   }
 
 // Fonction pour passer à la prochaine personne
+// Fonction pour passer à la prochaine personne
 function nextPerson() {
     // Ajouter la personne actuelle à la liste des personnes jouées
     playedPersons.push(currentPerson.name);
@@ -196,7 +226,7 @@ function nextPerson() {
     if (playedPersons.length === persons.length) {
         // Afficher le résultat final
         const result = document.getElementById("result");
-        result.innerText = "Tu as terminé la partie ! Tu as obtenu " + correctAnswers + " réponses justes sur " + persons.length;
+        result.innerHTML = "Tu as terminé la partie ! Tu as obtenu " + correctAnswers + " réponses justes sur " + persons.length + "<br>Ton score et de : " + currentScore;
 
         //afficher le bouton rejouer
         
