@@ -73,3 +73,26 @@ body {
     padding: 1em;
     text-align: center;
   }
+
+  /* Ajout de médias requêtes pour les téléphones */
+@media (max-width: 767px) {
+  /* Pas de changement, le layout reste le même */
+  body {
+    font-size: 16px; /* Augmentation de la taille du texte pour améliorer la lisibilité */
+  }
+  header nav ul {
+    flex-direction: column; /* Même layout que sur ordinateur */
+  }
+  #jeu {
+    padding: 20px; /* Même padding que sur ordinateur */
+  }
+  section {
+    padding: 15px; /* Réduction du padding pour améliorer la lisibilité sur téléphone */
+  }
+  h1 {
+    font-size: 20px; /* Réduction de la taille du titre pour améliorer la lisibilité sur téléphone */
+  }
+  button {
+    padding: 8px 15px; /* Réduction du padding du bouton pour améliorer la lisibilité sur téléphone */
+  }
+}

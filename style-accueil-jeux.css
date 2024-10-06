@@ -62,3 +62,22 @@ button {
 button:hover {
     background-color: #247BA0;
 }
+
+/* Ajout de médias requêtes pour les téléphones */
+@media (max-width: 767px) {
+    /* Pas de changement, le layout reste le même */
+    body {
+      font-size: 16px; /* Augmentation de la taille du texte pour améliorer la lisibilité */
+    }
+    #game-container {
+      width: 90%; /* Réduction de la largeur du conteneur pour améliorer la lisibilité sur téléphone */
+      height: 80vh; /* Réduction de la hauteur du conteneur pour améliorer la lisibilité sur téléphone */
+    }
+    #person-photo {
+      width: 80%; /* Réduction de la largeur de l'image pour améliorer la lisibilité sur téléphone */
+      height: 60vh; /* Réduction de la hauteur de l'image pour améliorer la lisibilité sur téléphone */
+    }
+    button {
+      padding: 8px 15px; /* Réduction du padding du bouton pour améliorer la lisibilité sur téléphone */
+    }
+  }

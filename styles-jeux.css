@@ -96,3 +96,37 @@ button:hover {
 #extern{
     margin-top: -100px;
 }
+
+/* Ajout de médias requêtes pour les téléphones */
+@media (max-width: 767px) {
+    /* Pas de changement, le layout reste le même */
+    body {
+      font-size: 16px; /* Augmentation de la taille du texte pour améliorer la lisibilité */
+    }
+    #game-container {
+      width: 90%; /* Réduction de la largeur du conteneur pour améliorer la lisibilité sur téléphone */
+      height: 80vh; /* Réduction de la hauteur du conteneur pour améliorer la lisibilité sur téléphone */
+    }
+    #person-photo{
+      margin-top: -200px;
+      margin-left: 100px;
+      width: 200px;
+      height: 200px;
+    }
+    input {
+      margin-left: 100px;
+    }
+    #submit-btn{
+      margin-left: 150px;
+    }
+    #next-btn{
+      margin-left: 150px;
+    }
+    #start-btn{
+      margin-top: 200px;
+      margin-left: 100px;
+    }
+    button {
+      padding: 8px 15px; /* Réduction du padding du bouton pour améliorer la lisibilité sur téléphone */
+    }
+  }
