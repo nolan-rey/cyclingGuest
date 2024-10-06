@@ -226,7 +226,7 @@ function nextPerson() {
     if (playedPersons.length === persons.length) {
         // Afficher le résultat final
         const result = document.getElementById("result");
-        result.innerHTML = "Tu as terminé la partie ! Tu as obtenu " + correctAnswers + " réponses justes sur " + persons.length + "<br>Ton score et de : " + currentScore;
+        result.innerHTML = "Tu as terminé la partie ! Tu as obtenu " + correctAnswers + " réponses justes sur " + persons.length + "<br>Ton score et de : " + currentScore + "/100";
 
         //afficher le bouton rejouer
         
