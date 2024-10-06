@@ -109,18 +109,18 @@ button:hover {
     }
     #person-photo{
       margin-top: -200px;
-      margin-left: 50px;
+      margin-left: 65px;
       width: 200px;
       height: 200px;
     }
     input {
-      margin-left: 100px;
+      margin-left: 65px;
     }
     #submit-btn{
-      margin-left: 150px;
+      margin-left: 100px;
     }
     #next-btn{
-      margin-left: 150px;
+      margin-left: 100px;
     }
     #start-btn{
       margin-top: 200px;
