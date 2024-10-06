@@ -4,8 +4,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Cycling Guest</title>
-        <link rel="stylesheet" href="styles-jeux.css">
-        <script src="game.js"></script>
+        <link rel="stylesheet" href="style-accueil-jeux.css">
+        <script src="launcher.js"></script>
     </head>
     <body>
         <header>
@@ -14,11 +14,8 @@
         <main>
         <div id="game-container">
             <div id="info-game">
-            <img id="person-photo" src="" alt="Guess who">
-            <input type="text" id="guess-input" placeholder="Qui est-ce ?" style="display: none;">
-            <button id="submit-btn" onclick="checkAnswer()" style="display: none;">Valider</button>
-            <button id="next-btn" onclick="nextPerson()" style="display: none;">Suivant</button>
-            <p id="result"></p>
+            <img id="person-photo" src="/logo-jeux.png" alt="Guess who">
+            <button id="start-btn" onclick="startGame()">Commencer la partie</button>
             </div>
         </div>
         </main>

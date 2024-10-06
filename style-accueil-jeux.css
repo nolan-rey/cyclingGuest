@@ -15,66 +15,39 @@ body {
     border: 1px solid #ddd;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-top: 5px;
-  }
+    margin-top: 20px; /* Ajustement de la marge du conteneur du jeu */
+}
 
 main {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-  }
+}
 
 header {
     background-color: #333;
     color: #fff;
     padding: 20px;
     text-align: center;
-  }
+}
 
-
-#person-photo{
-    margin-top: -360px;
-    margin-left: 250px;
-    width: 300px;
-    height: 300px;
+/* Image de la personne */
+#person-photo {
+    width: 400px;
+    height: 400px;
     object-fit: cover;
     border-radius: 10px;
-    position: static;
+    margin: 20px auto; /* Centrer l'image et ajouter une marge au-dessus et en dessous */
+    display: block; /* S'assurer que l'image est un bloc indépendant */
+}
+
+/* Bouton pour commencer le jeu */
+#start-btn {
+    margin: 30px auto; /* Centrer et espacer correctement */
     display: block;
 }
-
-#replay-btn{
-    margin-left: -25px;
-}
-
-input {
-    padding: 10px;
-    font-size: 16px;
-    margin-bottom: 10px;
-    margin-left: 300px;
-    margin-top: 30px;
-}
-
-#submit-btn{
-    margin-left: 355px;
-}
-
-#next-btn{
-    margin-left: 355px;
-}
-
-#start-btn{
-    margin-top: 300px;
-    position: static;
-    display: block;
-    margin-left: 300px;
-}
-
-#info-game{
-    margin-top: 45vh;
-}
-
+/* Style des boutons en général */
 button {
     padding: 10px 20px;
     font-size: 16px;
@@ -82,17 +55,10 @@ button {
     color: white;
     border: none;
     cursor: pointer;
+    margin: 10px auto; /* Centrer les boutons */
+    display: block;
 }
 
 button:hover {
     background-color: #247BA0;
-}
-
-#result {
-    margin-top: 20px;
-    font-size: 18px;
-}
-
-#extern{
-    margin-top: -100px;
 }
