@@ -1,7 +1,7 @@
 // launcher.js
 function startGame() {
     // Code pour démarrer le jeu
-    window.location.href = '/jeux.html';
+    window.location.href = 'jeux.html';
     // Sélectionner une personne aléatoire
     currentPerson = persons[Math.floor(Math.random() * persons.length)];
 
